@@ -17,3 +17,6 @@ A module for FoundryVTT which allows you to make changes to the ApplicationV2 pa
 1. Install the module via the manifest link
 2. Enable the module within your world
 3. Go into the settings and edit to your preferences
+
+## Small Warning
+The code for this is not fantastic as I'm not primarily a JavaScript developer. Except bugs. Also, while this should work with just about any system or module, etc, there are going to be exceptions. Mostly if they mess with the pause popup themselves. I can attempt to make fixes for any situations like this, but no promises on it.

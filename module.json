@@ -7,6 +7,10 @@
     "name": "Tomato"
     }
   ],
+  "url": "https://github.com/MiniGrief/pause-tweaks",
+  "manifest": "https://github.com/MiniGrief/pause-tweaks/releases/latest/download/module.json",
+  "download": "https://github.com/MiniGrief/pause-tweaks/releases/download/v1.0.0/pause-tweaks.zip",
+  "bugs": "https://github.com/MiniGrief/pause-tweaks/issues",
   "version": "1.0.0",
   "compatibility": {
     "minimum": "13",

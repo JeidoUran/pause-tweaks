@@ -1,0 +1,25 @@
+{
+  "id": "pause-tweaks",
+  "title": "Pause Tweaks",
+  "description": "Changes some visual aspects of the pause popup",
+  "authors": [
+    {
+    "name": "Tomato"
+    }
+  ],
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13.441"
+  },
+  "esmodules": [
+	"scripts/pause-tweaks.mjs"
+  ],
+  "languages": [
+	  {
+		"lang": "en",
+		"name": "English",
+		"path": "lang/en.json"
+	  }
+  ]
+}

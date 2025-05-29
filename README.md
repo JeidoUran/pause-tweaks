@@ -7,6 +7,7 @@ A module for FoundryVTT which allows you to make changes to the ApplicationV2 pa
 ## Features
 * Change Height
 * Change Scale
+* Change Spinning Animation Speed
 * Smaller Background
 * Disable Spinning Animation
 * Disable Pulsing Animation

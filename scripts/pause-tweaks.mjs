@@ -9,6 +9,15 @@ function FindChild(child) {
 	}
 }
 
+function setupSpin() {
+	let img = FindChild("img")
+	
+	if (img != null) {
+		img.classList.remove("fa-spin")
+		img.classList.add("pausetweaks-spin")
+	}
+}
+
 function updateHeight(height) {
 	if (game.settings.get(modulename, 'pause-smallerbg')) {
 		$('#pause').css('top', `calc(${height}vh - 85px)`)
@@ -37,7 +46,7 @@ function updateBGSize(toggle) {
 
 function updateSpin(toggle) {
 	let img = FindChild("img")
-	let className = "fa-spin"
+	let className = "pausetweaks-spin"
 	
 	if (img != null) {
 		if (toggle && img.classList.contains(className)) {
@@ -45,6 +54,14 @@ function updateSpin(toggle) {
 		} else if (!toggle && !img.classList.contains(className)) {
 			img.classList.add(className)
 		}
+	}
+}
+
+function updateSpinSpeed(time) {
+	let img = FindChild("img")
+	
+	if (img != null) {
+		img.style.animationDuration = (time/10).toString()+'s'
 	}
 }
 
@@ -99,6 +116,23 @@ function ready() {
 		type: Number,
 		onChange: (value) => {
 			updateScale(value);
+		}
+	});
+	
+	game.settings.register(modulename, "pause-spinspeed", {
+		name: game.i18n.localize("pausetweaks.settings.spinspeed.name"),
+		hint: game.i18n.localize("pausetweaks.settings.spinspeed.hint"),
+		scope: "world",
+		config: true,
+		range: {
+			min: 1,
+			max: 200,
+			step: 1,
+		},
+		default: 50,
+		type: Number,
+		onChange: (value) => {
+			updateSpinSpeed(value);
 		}
 	});
 	
@@ -163,13 +197,16 @@ function ready() {
         }
     });
 	
+	setupSpin();
 	updateHeight(game.settings.get(modulename, 'pause-height'));
 	updateScale(game.settings.get(modulename, 'pause-scale'));
+	updateSpinSpeed(game.settings.get(modulename, 'pause-spinspeed'));
 	updateBGSize(game.settings.get(modulename, 'pause-smallerbg'));
 	updateSpin(game.settings.get(modulename, 'pause-nospin'));
 	updateText(game.settings.get(modulename, 'pause-text'));
 	updateImg(game.settings.get(modulename, 'pause-img'));
 	updatePulse(game.settings.get(modulename, 'pause-pulse'));
+	
 }
 	
 Hooks.on("ready", ready);

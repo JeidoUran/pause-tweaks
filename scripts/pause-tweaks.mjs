@@ -57,6 +57,14 @@ function updateSpin(toggle) {
 	}
 }
 
+function updateSpinDirection(toggle) {
+	if (toggle) {
+		$('.pausetweaks-spin').css('animation-direction', 'reverse')
+	} else {
+		$('.pausetweaks-spin').css('animation-direction', 'normal')
+	}
+}
+
 function updateSpinSpeed(time) {
 	let img = FindChild("img")
 	
@@ -157,6 +165,18 @@ function ready() {
 		type: Boolean,
 		onChange: (value) => {
 			updateSpin(value)
+        }
+	});
+	
+	game.settings.register(modulename, "pause-spindirection", {
+		name: game.i18n.localize("pausetweaks.settings.spindirection.name"),
+		hint: game.i18n.localize("pausetweaks.settings.spindirection.hint"),
+		scope: "world",
+		config: true,
+		default: false,
+		type: Boolean,
+		onChange: (value) => {
+			updateSpinDirection(value)
         }
 	});
 	

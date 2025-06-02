@@ -10,6 +10,7 @@ A module for FoundryVTT which allows you to make changes to the ApplicationV2 pa
 * Change Spinning Animation Speed
 * Smaller Background
 * Disable Spinning Animation
+* Reverse Spinning Animation
 * Disable Pulsing Animation
 * Change Text
 * Change Image

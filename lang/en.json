@@ -14,6 +14,9 @@
 	"pausetweaks.settings.nospin.name": "Disable Spin Animation",
 	"pausetweaks.settings.nospin.hint": "Allows you to disable the spinning animation.",
 	
+	"pausetweaks.settings.spindirection.name": "Reverse Spin Animation",
+	"pausetweaks.settings.spindirection.hint": "Allows you to reverse the spinning animation.",
+	
 	"pausetweaks.settings.pulse.name": "Disable Pulse Animation",
 	"pausetweaks.settings.pulse.hint": "Allows you to disable the pulsing animation.",
 	

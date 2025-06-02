@@ -1,5 +1,6 @@
 .pausetweaks-spin {
   animation: fa-spin 5s infinite linear;
+  animation-direction: normal;
 }
 
 /* Fix for the ARS system's icon */

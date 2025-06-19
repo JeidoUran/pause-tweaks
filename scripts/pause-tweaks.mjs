@@ -39,7 +39,7 @@ function updateBGSize(toggle) {
 	} else {
 		$('#pause').css('left', '0')
 		$('#pause').css('width', '100%')
-		$('#pause').css('height', '180px')
+		$('#pause').css('height', '280px')
 		$('#pause').css('top', `calc(${game.settings.get(modulename, 'pause-height')}vh - 100px)`)
 	}
 }

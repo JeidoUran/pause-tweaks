@@ -229,4 +229,17 @@ function ready() {
 	
 }
 	
+function onPause() {
+  setupSpin();
+	updateHeight(game.settings.get(modulename, 'pause-height'));
+	updateScale(game.settings.get(modulename, 'pause-scale'));
+	updateSpinSpeed(game.settings.get(modulename, 'pause-spinspeed'));
+	updateBGSize(game.settings.get(modulename, 'pause-smallerbg'));
+	updateSpin(game.settings.get(modulename, 'pause-nospin'));
+	updateText(game.settings.get(modulename, 'pause-text'));
+	updateImg(game.settings.get(modulename, 'pause-img'));
+	updatePulse(game.settings.get(modulename, 'pause-pulse'));
+}
+
 Hooks.on("ready", ready);
+Hooks.on("renderGamePause", onPause);
